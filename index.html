@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Karunakar! 🎉</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4da6ff 0%, #80d0ff 50%, #b3e0ff 100%);
+            color: #2c3e50;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .main-title {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .gaming-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+        }
+
+        .gaming-icons span {
+            animation: bounce 2s infinite;
+        }
+
+        .gaming-icons span:nth-child(2) { animation-delay: 0.2s; }
+        .gaming-icons span:nth-child(3) { animation-delay: 0.4s; }
+        .gaming-icons span:nth-child(4) { animation-delay: 0.6s; }
+
+        /* Birthday Message Styles */
+        .birthday-message {
+            padding: 30px 0;
+            margin-bottom: 30px;
+        }
+
+        .message-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: slideUp 1s ease-out;
+        }
+
+        .message-card h2 {
+            color: #2980b9;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+        }
+
+        .message-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .signature {
+            font-style: italic;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-top: 30px;
+            text-align: right;
+        }
+
+        /* Playing Card Photo Gallery Styles */
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 350px;
+            margin: 60px 0;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .card-holder {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .photo-card {
+            position: absolute;
+            width: 220px;
+            height: 280px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s ease, z-index 0.5s ease;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .photo-card:nth-child(1) {
+            transform: rotate(-15deg) translateX(-80px);
+            z-index: 1;
+        }
+
+        .photo-card:nth-child(2) {
+            transform: rotate(-5deg) translateX(-20px);
+            z-index: 2;
+        }
+
+        .photo-card:nth-child(3) {
+            transform: rotate(5deg) translateX(20px);
+            z-index: 3;
+        }
+
+        .photo-card:hover {
+            transform: rotate(0deg) translateY(-30px) scale(1.1) !important;
+            z-index: 10;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .photo-frame {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-placeholder {
+            background: linear-gradient(135deg, #4da6ff, #80d0ff);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .photo-placeholder small {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Cake Animation Styles */
+        .cake-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .cake-section h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+        }
+
+        .cake-container {
+            display: inline-block;
+            cursor: pointer;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .cake-container:hover {
+            transform: scale(1.05);
+        }
+
+        .cake {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            margin: 0 auto;
+        }
+
+        .cake-base {
+            width: 180px;
+            height: 60px;
+            background: linear-gradient(45deg, #8B4513, #A0522D);
+            border-radius: 10px 10px 0 0;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+        }
+
+        .cake-middle {
+            width: 160px;
+            height: 40px;
+            background: linear-gradient(45deg, #FFB6C1, #FF69B4);
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            bottom: 60px;
+            left: 20px;
+        }
+
+        .cake-top {
+            width: 140px;
+            height: 30px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            bottom: 100px;
+            left: 30px;
+        }
+
+        .candles {
+            position: absolute;
+            bottom: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        .candle {
+            width: 8px;
+            height: 30px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+        }
+
+        .flame {
+            width: 12px;
+            height: 20px;
+            background: linear-gradient(45deg, #FF4500, #FFA500);
+            border-radius: 50% 50% 20% 20%;
+            position: absolute;
+            top: -25px;
+            left: -2px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .candle.lit .flame {
+            opacity: 1;
+            animation: flicker 1s infinite alternate;
+        }
+
+        .wish-button {
+            background: linear-gradient(135deg, #4da6ff, #2980b9);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(41, 128, 185, 0.3);
+            margin: 20px 0;
+        }
+
+        .wish-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(41, 128, 185, 0.4);
+        }
+
+        .instruction {
+            color: #2c3e50;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* Confetti Styles */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+            animation: confetti-fall 5s linear forwards;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.8);
+            width: 100%;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes flicker {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                opacity: 1;
+                transform: translateY(-100px) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+
+       
+        @media (max-width: 900px) {
+            .cards-container {
+                height: 300px;
+            }
+            
+            .card-holder {
+                width: 350px;
+                height: 250px;
+            }
+            
+            .photo-card {
+                width: 180px;
+                height: 230px;
+            }
+            
+            .photo-card:nth-child(1) {
+                transform: rotate(-15deg) translateX(-60px);
+            }
+
+            .photo-card:nth-child(2) {
+                transform: rotate(-5deg) translateX(-10px);
+            }
+
+            .photo-card:nth-child(3) {
+                transform: rotate(5deg) translateX(10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .message-card {
+                padding: 25px;
+            }
+            
+            .message-card h2 {
+                font-size: 1.8rem;
+            }
+            
+            .message-content p {
+                font-size: 1rem;
+            }
+            
+            .cards-container {
+                height: 250px;
+            }
+            
+            .card-holder {
+                width: 300px;
+                height: 200px;
+            }
+            
+            .photo-card {
+                width: 150px;
+                height: 190px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .cards-container {
+                height: 220px;
+            }
+            
+            .card-holder {
+                width: 260px;
+                height: 180px;
+            }
+            
+            .photo-card {
+                width: 130px;
+                height: 170px;
+            }
+            
+            .photo-card:nth-child(1) {
+                transform: rotate(-30deg) translateX(-40px);
+            }
+
+            .photo-card:nth-child(2) {
+                transform: rotate(-5deg) translateX(-10px);
+            }
+
+            .photo-card:nth-child(3) {
+                transform: rotate(10deg) translateX(5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header">
+            <h1 class="main-title">Happy Birthday, Karunakar! 🎉</h1>
+            <p class="subtitle">Wishing you an amazing day filled with joy and celebration! 🎮</p>
+            <div class="gaming-icons">
+                <span>🎯</span>
+                <span>🏆</span>
+                <span>⭐</span>
+                <span>🎮</span>
+            </div>
+        </header>
+
+        
+        <section class="birthday-message">
+            <div class="message-card">
+                <h2>Dear Karunakar,</h2>
+                <div class="message-content">
+                    <p>
+                        Happy Birthday! 🎂 I hope your special day is as incredible as you are!
+                    </p>
+                    <p>
+                        You're not just an amazing Free Fire player but also one of the most intelligent people I know. 
+                        Your ability to excel in gaming while maintaining your studies is truly impressive and inspiring.
+                    </p>
+                    <p>
+                        May this year bring you countless victories in Free Fire, success in all your endeavors, 
+                        and wonderful memories with friends and family. Keep shining and achieving great things!
+                    </p>
+                    <p class="signature">
+                        With warmest wishes,<br />
+                        prasanth
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+        <div class="cards-container">
+            <div class="card-holder">
+                <div class="photo-card">
+                    <div class="photo-frame">
+                        <div class="photo-placeholder">
+                            <img src="./WhatsApp Image 2025-10-26 at 17.03.08_fa22f576.jpg" alt="" width="200px">
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-frame">
+                        <div class="photo-placeholder">
+                            <img src="./WhatsApp Image 2025-09-08 at 22.46.23_49672d68.jpg" alt="" width="200px">
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-frame">
+                        <div class="photo-placeholder">
+                            <img src="./WhatsApp Image 2025-10-26 at 17.03.06_d7aa8f16.jpg" alt="" width="200px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <section class="cake-section">
+            <h2>Make a Wish! 🎂</h2>
+            <div class="cake-container" id="cakeContainer">
+                <div class="cake">
+                    <div class="cake-top"></div>
+                    <div class="cake-middle"></div>
+                    <div class="cake-base"></div>
+                    <div class="candles">
+                        <div class="candle" id="candle1">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle" id="candle2">
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="wish-button" id="wishButton">🎉 Click to Send Birthday Wishes! 🎉</button>
+            <p class="instruction">Click the cake or button to celebrate!</p>
+        </section>
+    </div>
+
+    
+    <footer>
+        <p>Made with ❤️ for Karunakar's Birthday</p>
+    </footer>
+
+   
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <script>
+        
+        function createConfetti() {
+            const colors = ['#4da6ff', '#ff6b6b', '#ffd93d', '#6bcf7f', '#c44569'];
+            const confettiContainer = document.getElementById('confettiContainer');
+            confettiContainer.innerHTML = '';
+            
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confettiContainer.appendChild(confetti);
+            }
+        }
+
+        
+        function lightCandles() {
+            document.getElementById('candle1').classList.add('lit');
+            document.getElementById('candle2').classList.add('lit');
+            createConfetti();
+            
+            // Play birthday sound (optional)
+            try {
+                const audio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAAAA==');
+                audio.play();
+            } catch(e) {
+                console.log('Audio play failed:', e);
+            }
+        }
+
+        // Event listeners
+        document.getElementById('cakeContainer').addEventListener('click', lightCandles);
+        document.getElementById('wishButton').addEventListener('click', lightCandles);
+
+        // Add photo upload functionality (placeholder)
+        document.addEventListener('DOMContentLoaded', function() {
+            const photoPlaceholders = document.querySelectorAll('.photo-placeholder');
+            photoPlaceholders.forEach(placeholder => {
+                placeholder.addEventListener('click', function() {
+                    alert('Happy birthday !, also i wanted to know how old are you now ??');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
